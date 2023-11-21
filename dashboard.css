@@ -75,4 +75,7 @@ h2 {
     .card {
         max-width: 100%;
     }
+
+    h2 {
+        width: 50px;
 }
