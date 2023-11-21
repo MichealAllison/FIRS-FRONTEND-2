@@ -6,7 +6,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    background-color: gray;
 }
 
 .container {
@@ -28,12 +28,16 @@ form {
     gap: 10px;
 }
 
+h2{
+    color: darkolivegreen;
+}
+
 input {
     padding: 10px;
 }
 
 button {
-    background-color: #007BFF;
+    background-color: darkolivegreen;
     color: #fff;
     border: none;
     padding: 10px;
@@ -42,11 +46,11 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: rgb(116, 167, 41);
 }
 
 a {
-    color: #007BFF;
+    color: darkolivegreen;
 }
 
 
