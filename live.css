@@ -112,6 +112,15 @@ button.delete-btn {
     text-align: center;
 }
 
+#openNav {
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    color: white;
+}
+
 
 /* live css */
 /* live css */
