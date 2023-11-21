@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Login and Registration</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Username/Email:</label>
+                <input type="text" id="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+
+                <!-- Change type to "submit" to trigger the form submission -->
+                <button type="submit">Login</button>
+            </form>
+
+            <p>Don't have an account? <a href="index.html">Register here</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Add an event listener to the form for form submission
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+
+            // Call the login function (you may want to add your login logic here)
+            login();
+
+            // Redirect to the dashboard page after a successful login
+            window.location.href = "Dashboard.html";
+        });
+
+        function login() {
+            // You can add your login logic here
+            // For example, validate the username and password
+            // If login is successful, proceed with the redirection
+        }
+    </script>
+</body>
+</html>

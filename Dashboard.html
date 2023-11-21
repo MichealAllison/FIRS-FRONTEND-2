@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <div id="sidebar">
+        <a href="javascript:void(0)" id="closeNav" onclick="closeNav()">×</a>
+        <a href="#">Logs</a>
+        <a href="Live.html">Live</a>
+        <a href="Dashboard.html" class="active">Admin</a>
+        <a href="detailed.html">Detailed</a>
+        <a href="index.html">Log out</a>
+      </div>
+    </div>
+
+    <div id="main">
+        <span id="openNav" onclick="openNav()">☰</span>
+
+        <div class="card">
+            <img src="image1.jpg" alt="Image 1" style="width:100%">
+            <h2>Francis WHO</h2>
+            <p>Farm Owner</p>
+        </div>
+
+        <div class="card">
+            <img src="image2.jpg" alt="Image 2" style="width:100%">
+            <h2>Nick</h2>
+            <p>Store Kepper</p>
+        </div>
+
+        <div class="card">
+            <img src="image3.jpg" alt="Image 3" style="width:100%">
+            <h2>Mazi</h2>
+            <p>IT support</p>
+        </div>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("sidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("sidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+
+</body>
+</html>

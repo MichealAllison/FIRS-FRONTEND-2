@@ -1,0 +1,185 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    color: white;
+}
+
+#sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+#sidebar a:hover {
+    color: #f1f1f1;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+#notification-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    max-width: 300px;
+    z-index: 999;
+}
+
+.notification-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.notification-card:hover {
+    transform: scale(1.05);
+}
+
+.notification-content {
+    flex: 1;
+}
+
+.notification-actions {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+button {
+    padding: 8px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+button.view-btn {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+}
+
+button.delete-btn {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+}
+
+#static-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px);
+}
+
+.static-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* live css */
+/* live css */
+
+.live-container {
+    display:block;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the items horizontally */
+    align-items: flex-start; /* Align the items to the top of the container */
+    padding: 20px;
+}
+
+.wider-notification-card {
+    flex: 0 0 calc(33.33% - 20px); /* 33.33% width with 20px margin on both sides */
+    margin: 10px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Add these styles to your existing CSS */
+
+.notification-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+button.view-btn,
+button.delete-btn {
+    padding: 8px;
+    margin-left: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button.view-btn {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+button.delete-btn {
+    background-color: #f44336;
+    color: #fff;
+}
+
+button.view-btn:hover,
+button.delete-btn:hover {
+    background-color: #082c44;
+}
+
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .wider-notification-card {
+        flex: 0 0 calc(50% - 20px); /* 50% width with 20px margin on both sides for smaller screens */
+    }
+}
+
+/* Adjustments for even smaller screens */
+@media screen and (max-width: 480px) {
+    .wider-notification-card {
+        flex: 0 0 calc(100% - 20px); /* 100% width with 20px margin on both sides for even smaller screens */
+    }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/cb8e3acb5a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="live.css">
+</head>
+<body>
+
+    <div id="sidebar">
+        <a href="javascript:void(0)" id="closeNav" onclick="closeNav()">×</a>
+        <a href="#">Logs</a>
+        <a href="Live.html" class="active">Live</a>
+        <a href="Dashboard.html" >Admin</a>
+        <a href="detailed.html">Detailed</a>
+        <a href="Register.html">Log out</a>
+    </div>
+
+    <div id="main">
+        <span id="openNav" onclick="openNav()">☰</span>
+
+        <div id="notification-container"></div>
+
+        <div class="live-container"></div>
+
+        <script>
+            function createNotification(intruderName) {
+                const container = document.getElementById('notification-container');
+
+                const notificationCard = document.createElement('div');
+                notificationCard.className = 'notification-card';
+
+                const content = document.createElement('div');
+                content.className = 'notification-content';
+                content.textContent = `Intruder detected: ${intruderName}`;
+
+                const actions = document.createElement('div');
+                actions.className = 'notification-actions';
+
+                const viewButton = document.createElement('button');
+                viewButton.className = 'view-btn';
+                viewButton.textContent = 'View';
+                viewButton.addEventListener('click', () => viewDetails(intruderName));
+
+                const deleteButton = document.createElement('button');
+                deleteButton.className = 'delete-btn';
+                deleteButton.textContent = 'Delete';
+                deleteButton.addEventListener('click', () => {
+                    notificationCard.remove();
+                    alert(`Delete action for ${intruderName}`);
+                });
+
+                actions.appendChild(viewButton);
+                actions.appendChild(deleteButton);
+
+                notificationCard.appendChild(content);
+                notificationCard.appendChild(actions);
+
+                container.appendChild(notificationCard);
+
+                setTimeout(() => {
+                    notificationCard.remove();
+                }, 5000); // Auto-remove after 5 seconds
+            }
+
+            function openNav() {
+                document.getElementById("sidebar").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("sidebar").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0";
+            }
+
+            function viewDetails(intruderName) {
+                alert(`View action for ${intruderName}`);
+                // You can add code here to show more details or navigate to another page for detailed information.
+            }
+
+            // Simulate intrusion detection
+            setInterval(() => {
+                const intruderName = `Intruder ${Math.floor(Math.random() * 100)}`;
+                createNotification(intruderName);
+            }, 10000); // Simulate every 10 seconds
+        </script>
+
+    </div>
+
+    <script src="live.js"></script>
+</body>
+</html>

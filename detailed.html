@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="detailed.css">
+</head>
+<body>
+
+    <div id="detailed-sidebar">
+        <a href="javascript:void(0)" id="closeDetailedNav" onclick="closeDetailedNav()">×</a>
+        <a href="#">Logs</a>
+        <a href="Live.html">Live</a>
+        <a href="Dashboard.html" >Admin</a>
+        <a href="detailed.html" class="active">Detailed</a>
+        <a href="Register.html">Log out</a>
+    </div>
+
+    <div id="detailed-main">
+        <span id="openDetailedNav" onclick="openDetailedNav()">☰</span>
+
+        <div id="detailed-container">
+            <div class="detailed-card">
+                <!-- Add image, intruder ID, and timestamp -->
+                <img src="intruder_image.jpg" alt="Intruder Image" style="max-width: 100%; border-radius: 8px;">
+                <h2>Intruder ID: 12345</h2>
+                <p>Time: 2023-11-21 12:30 PM</p>
+            </div>
+        </div>
+
+        <script>
+            function openDetailedNav() {
+                document.getElementById("detailed-sidebar").style.width = "250px";
+                document.getElementById("detailed-main").style.marginLeft = "250px";
+            }
+
+            function closeDetailedNav() {
+                document.getElementById("detailed-sidebar").style.width = "0";
+                document.getElementById("detailed-main").style.marginLeft = "0";
+            }
+        </script>
+    </div>
+
+</body>
+</html>
