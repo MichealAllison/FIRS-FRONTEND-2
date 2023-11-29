@@ -50,6 +50,10 @@ body {
     margin-top:50px;
 }
 
+img {
+    width: 300px;
+}
+
 h2 {
     color: darkolivegreen;
 }
