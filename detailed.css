@@ -23,6 +23,10 @@ body {
     text-align: center;
 }
 
+.detailed-card img {
+    width: 100px;
+}
+
 #detailed-sidebar {
     height: 100%;
     width: 0;
