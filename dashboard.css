@@ -52,7 +52,6 @@ body {
 
 img {
     width: 200px;
-    max-width: 200px;
 }
 
 h2 {
@@ -82,5 +81,8 @@ h2 {
     .card {
         max-width: 100%;
         margin-top: 50px;
+    }
+    img{
+        width: 200px;
     }
 }
